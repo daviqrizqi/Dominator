@@ -12,7 +12,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Dominator Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title> Dominator Srote</title>
   </head>
   <body>
     <div class="nav-container">
@@ -36,7 +37,7 @@
               <h5 class="card-title text-start p-0 pt-2">Top Up Diamond Mobile Legends</h5>
                <h6 class="card-subtitle pt-4"> Perhatikan kembali informasi berikut Sebelum Order!!</h6>
               <div class="card-text">Orderan Top Up dicek Pukul 09.00 - 21.00 WIB</div>
-              <div class="card-text">*Akan Dicek di Hari Berikutnya Jika Melewati Batas Pengecekan Orderan*</div>
+              <div class="card-text">Akan Dicek di Hari Berikutnya Jika Melewati Batas Pengecekan Orderan</div>
                 <div class="col text-start p-0 pt-4">Cara Order :</div>
                 <ol class="text-start p-0 ml-5">
                   <li>Pilih Nominal TopUp </li>
@@ -58,13 +59,16 @@
               <div class="row">
                 <!-- Card produk pertama -->
                 <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 1" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">3 Diamonds</h6>
-                      <p class="card-text">Rp. 1.250</p>
+                  <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+                  <label class="btn" for="option1">
+                    <div class="card">
+                      <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 1" />
+                        <div class="card-body">
+                          <h6 class="card-subtitle mb-2 text-muted">3 Diamonds</h6>
+                          <p class="card-text">Rp. 1.250</p>
+                        </div>
                     </div>
-                  </div>
+                  </label>
                 </div>
                 <!-- Card produk ke dua -->
                 <div class="col-md-3">
@@ -72,7 +76,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">5 Diamonds</h6>
-                      <p class="card-text">Rp. 1.500</p>
+                      <p class="card-text">Rp. 1.800</p>
                     </div>
                   </div>
                 </div>
@@ -82,7 +86,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">10 Diamonds</h6>
-                      <p class="card-text">Rp. 2.800</p>
+                      <p class="card-text">Rp. 3.200</p>
                     </div>
                   </div>
                 </div>
@@ -92,7 +96,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">14 Diamonds</h6>
-                      <p class="card-text">Rp. 3.800</p>
+                      <p class="card-text">Rp. 4.000</p>
                     </div>
                   </div>
                 </div>
@@ -102,7 +106,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">28 Diamonds</h6>
-                      <p class="card-text">Rp. 7.600</p>
+                      <p class="card-text">Rp. 7.800</p>
                     </div>
                   </div>
                 </div>
@@ -122,7 +126,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">44 Diamonds</h6>
-                      <p class="card-text">Rp. 11.400</p>
+                      <p class="card-text">Rp. 11.500</p>
                     </div>
                   </div>
                 </div>
@@ -132,7 +136,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">59 Diamonds</h6>
-                      <p class="card-text">Rp. 15.300</p>
+                      <p class="card-text">Rp. 15.500</p>
                     </div>
                   </div>
                 </div>
@@ -142,7 +146,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">170 Diamonds</h6>
-                      <p class="card-text">Rp. 43.700</p>
+                      <p class="card-text">Rp. 43.500</p>
                     </div>
                   </div>
                 </div>
@@ -151,8 +155,8 @@
                   <div class="card">
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">185 Diamonds</h6>
-                      <p class="card-text">Rp. 47.800</p>
+                      <h6 class="card-subtitle mb-2 text-muted">184 Diamonds</h6>
+                      <p class="card-text">Rp. 48.300</p>
                     </div>
                   </div>
                 </div>
@@ -162,7 +166,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">240 Diamonds</h6>
-                      <p class="card-text">Rp. 61.600</p>
+                      <p class="card-text">Rp. 62.800</p>
                     </div>
                   </div>
                 </div>
@@ -172,7 +176,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">296 Diamonds</h6>
-                      <p class="card-text">Rp. 75.900</p>
+                      <p class="card-text">Rp. 77.300</p>
                     </div>
                   </div>
                 </div>
@@ -182,7 +186,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">370 Diamonds</h6>
-                      <p class="card-text">Rp. 98.800</p>
+                      <p class="card-text">Rp. 96.600</p>
                     </div>
                   </div>
                 </div>
@@ -192,7 +196,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">408 Diamonds</h6>
-                      <p class="card-text">Rp. 104.300</p>
+                      <p class="card-text">Rp. 106.300</p>
                     </div>
                   </div>
                 </div>
@@ -202,7 +206,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">875 Diamonds</h6>
-                      <p class="card-text">Rp. 218.000</p>
+                      <p class="card-text">Rp. 220.000</p>
                     </div>
                   </div>
                 </div>
@@ -211,8 +215,8 @@
                   <div class="card">
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">1159 Diamonds</h6>
-                      <p class="card-text">Rp. 291.000</p>
+                      <h6 class="card-subtitle mb-2 text-muted">1136 Diamonds</h6>
+                      <p class="card-text">Rp. 283.500</p>
                     </div>
                   </div>
                 </div>
@@ -221,8 +225,8 @@
                   <div class="card">
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">1750 Diamonds</h6>
-                      <p class="card-text">Rp. 436.000</p>
+                      <h6 class="card-subtitle mb-2 text-muted">1704 Diamonds</h6>
+                      <p class="card-text">Rp. 425.000</p>
                     </div>
                   </div>
                 </div>
@@ -232,7 +236,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">2010 Diamonds</h6>
-                      <p class="card-text">Rp. 474.000</p>
+                      <p class="card-text">Rp. 472.000</p>
                     </div>
                   </div>
                 </div>
@@ -241,8 +245,8 @@
                   <div class="card">
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">2975 Diamonds</h6>
-                      <p class="card-text">Rp. 715.500</p>
+                      <h6 class="card-subtitle mb-2 text-muted">2625 Diamonds</h6>
+                      <p class="card-text">Rp. 625.000</p>
                     </div>
                   </div>
                 </div>
@@ -251,8 +255,8 @@
                   <div class="card">
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">4830 Diamonds</h6>
-                      <p class="card-text">Rp. 1.142.000</p>
+                      <h6 class="card-subtitle mb-2 text-muted">4588 Diamonds</h6>
+                      <p class="card-text">Rp. 1.100.200</p>
                     </div>
                   </div>
                 </div>
@@ -261,8 +265,8 @@
                   <div class="card">
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">6050 Diamonds</h6>
-                      <p class="card-text">Rp. 1.444.000</p>
+                      <h6 class="card-subtitle mb-2 text-muted">6030 Diamonds</h6>
+                      <p class="card-text">Rp. 1.410.000</p>
                     </div>
                   </div>
                 </div>
@@ -288,25 +292,25 @@
               <div class="form-group row justify-content-center align-item-center">
                 <label for="userid" class="col-sm-4 text-left">User ID</label>
                 <div class="col-sm-4">
-                  <input type="text" name="userid" id="userid" placeholder="User ID" class="form-control rounded-pill"/>
+                  <input type="text" name="userid" id="userid" placeholder="User ID" class="form-control rounded-pill" />
                 </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="serverid" class="col-sm-4 text-left">Server ID</label>
                 <div class="col-sm-4">
-                <input type="text" name="serverid" id="serverid" placeholder="Server ID" class="form-control rounded-pill"/>
+                <input type="text" name="serverid" id="serverid" placeholder="Server ID" class="form-control rounded-pill" />
               </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="nickname" class="col-sm-4 text-left">Nickname</label>
                 <div class="col-sm-4">
-                <input type="text" name="nickname" id="nickname" placeholder="Nickname" class="form-control rounded-pill"/>
+                <input type="text" name="nickname" id="nickname" placeholder="Nickname" class="form-control rounded-pill" />
               </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="whatsapp" class="col-sm-4 text-left">Nomor Whatsapp</label>
                 <div class="col-sm-4">
-                <input type="text" name="whatsapp" id="whatsapp" placeholder="Nomor Whatsapp" class="form-control rounded-pill"/>
+                <input type="text" name="whatsapp" id="whatsapp" placeholder="Nomor Whatsapp" class="form-control rounded-pill" />
               </div>
               </div>
               <p class="font-italic text-danger">Mohon Cek kembali id dan server game anda untuk menghindari kesalahan!!</p>
@@ -320,19 +324,22 @@
               <p class="card-text">Pilih Metode Pembayaran</p>
               <div class="row">
                 <!-- card pembayaran Gopay -->
+                <input type="radio" class="btn-check" name="payment" id="payment1" autocomplete="off">
+                  <label class="btn" for="payment1">
                 <div class="col-md-12 d-flex justify-content-center">
                   <div class="card-pay w-50 pt-2">
-                    <img src="assets/img/gopay.png" class="card-img-top" alt="Produk 1" />
+                    <img src="assets/pay/gopay.png" class="card-img-top" alt="Produk 1" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-white">Gopay a.n. Dominator Store</h6>
                       <p class="card-text text-white">089512532617</p>
                     </div>
                   </div>
                 </div>
+                  </label>
                 <!-- card pembayaran DANA -->
                 <div class="col-md-12 d-flex justify-content-center">
                   <div class="card-pay w-50 pt-2">
-                    <img src="assets/img/dana.png" class="card-img-top" alt="Produk 1" />
+                    <img src="assets/pay/dana.png" class="card-img-top" alt="Produk 1" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-white">Dana a.n. Iwan Kurniawan</h6>
                       <p class="card-text text-white">089512532617</p>
@@ -342,7 +349,7 @@
                 <!-- card pembayaran OVO -->
                 <div class="col-md-12 d-flex justify-content-center">
                   <div class="card-pay w-50 pt-2">
-                    <img src="assets/img/ovo.png" class="card-img-top" alt="Produk 1" />
+                    <img src="assets/pay/ovo.png" class="card-img-top" alt="Produk 1" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-white">OVO a.n. Dominator Store</h6>
                       <p class="card-text text-white">089512532617</p>
@@ -352,7 +359,7 @@
                 <!-- card pembayaran Shopeepay -->
                 <div class="col-md-12 d-flex justify-content-center">
                   <div class="card-pay w-50 pt-2">
-                    <img src="assets/img/shopeepay.png" class="card-img-top" alt="Produk 1" />
+                    <img src="assets/pay/shopeepay.png" class="card-img-top" alt="Produk 1" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-white">Shopeepay a.n. Dominator Store</h6>
                       <p class="card-text text-white">089512532617</p>
@@ -405,5 +412,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
-</html>
+  </body>
+</html> 

@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Dominator Store</title>
   </head>
   <body>
@@ -36,7 +37,7 @@
               <h5 class="card-title text-start p-0 pt-2">Joki Rank Mobile Legends</h5>
               <h6 class="card-subtitle pt-4"> Perhatikan kembali informasi berikut Sebelum Order!!</h6>
               <div class="card-text"> Orderan Joki dicek Pukul 09.00 - 21.00 WIB</div>
-                <div class="card-text"> *Akan Dicek di Hari Berikutnya Jika Melewati Batas Pengecekan Orderan*</div>
+                <div class="card-text"> Akan Dicek di Hari Berikutnya Jika Melewati Batas Pengecekan Orderan</div>
               <div class="col text-start p-0 pt-4">Cara Order :</div>
               <ol class="text-start p-0 ml-5">
                 <li>Matikan verifikasi akun untuk mempermudah login</li>
@@ -74,37 +75,37 @@
               <div class="form-group row justify-content-center align-item-center">
                 <label for="email" class="col-sm-4 text-left">Email/No.Telp</label>
                 <div class="col-sm-4">
-                  <input type="text" name="email" id="email" placeholder="Email" class="form-control rounded-pill"/>
+                  <input type="text" name="email" id="email" placeholder="Email" class="form-control rounded-pill" />
                 </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="password" class="col-sm-4 text-left">Password</label>
                 <div class="col-sm-4">
-                <input type="text" name="password" id="password" placeholder="Password" class="form-control rounded-pill"/>
+                <input type="text" name="password" id="password" placeholder="Password" class="form-control rounded-pill" />
               </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="reqhero" class="col-sm-4 text-left">Request Hero</label>
                 <div class="col-sm-4">
-                <input type="text" name="reqhero" id="reqhero" placeholder="Request Hero" class="form-control rounded-pill"/>
+                <input type="text" name="reqhero" id="reqhero" placeholder="Request Hero" class="form-control rounded-pill" />
               </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="nickname" class="col-sm-4 text-left">Nickname</label>
                 <div class="col-sm-4">
-                <input type="text" name="nickname" id="nickname" placeholder="Nickname" class="form-control rounded-pill"/>
+                <input type="text" name="nickname" id="nickname" placeholder="Nickname" class="form-control rounded-pill" />
               </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="keterangan" class="col-sm-4 text-left">Keterangan</label>
                 <div class="col-sm-4">
-                <input type="text" name="keterangan" id="keterangan" placeholder="Keterangan" class="form-control rounded-pill"/>
+                <input type="text" name="keterangan" id="keterangan" placeholder="Keterangan" class="form-control rounded-pill" />
               </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="whatsapp" class="col-sm-4 text-left">Nomor Whatsapp</label>
                 <div class="col-sm-4">
-                <input type="text" name="whatsapp" id="whatsapp" placeholder="whatsapp" class="form-control rounded-pill"/>
+                <input type="text" name="whatsapp" id="whatsapp" placeholder="whatsapp" class="form-control rounded-pill" />
               </div>
               </div>
             </div>
@@ -118,18 +119,21 @@
               <div class="row">
                 <!-- Card produk pertama -->
                 <div class="col-md-4">
+                  <input type="radio" class="btn-check" name="rank" id="rank1" autocomplete="off">
+                  <label class="btn" for="rank1">
                   <div class="card">
-                    <img src="assets/img/gm.png" class="card-img-top" alt="Produk 1" />
+                    <img src="assets/rank/gm.png" class="card-img-top" alt="Produk 1" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">GRAND MASTER</h6>
-                      <p class="card-text">Rp. 3.000</p>
+                      <p class="card-text">Rp. 4.000</p>
                     </div>
                   </div>
+                  </label>
                 </div>
                 <!-- Card produk ke dua -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/epic.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/epic.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">EPIC</h6>
                       <p class="card-text">Rp. 5.000</p>
@@ -139,7 +143,7 @@
                 <!-- Card produk ke tiga -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/legend.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/legend.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">LEGEND</h6>
                       <p class="card-text">Rp. 6.000</p>
@@ -149,7 +153,7 @@
                 <!-- card produk ke empat -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/mythic.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/mythic.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">MYTHIC</h6>
                       <p class="card-text">Rp. 11.000</p>
@@ -159,90 +163,90 @@
                 <!-- card produk ke lima -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/honor.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/honor.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">HONOR</h6>
-                      <p class="card-text">Rp. 13.000</p>
+                      <p class="card-text">Rp. 14.000</p>
                     </div>
                   </div>
                 </div>
                 <!-- card produk ke enam -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/glory.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/glory.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">GLORY</h6>
-                      <p class="card-text">Rp. 19.000</p>
+                      <p class="card-text">Rp. 18.000</p>
                     </div>
                   </div>
                 </div>
                  <!-- card produk ke tujuh -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/immortal.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/immortal.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">IMMORTAL</h6>
-                      <p class="card-text">Rp. 30.000</p>
+                      <p class="card-text">Rp. 25.000</p>
                     </div>
                   </div>
                 </div>
                  <!-- card produk ke delapan -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/mythic.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/epic.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">EPIC I - MYTHIC</h6>
-                      <p class="card-text">Rp. 160.000</p>
+                      <h6 class="card-subtitle mb-2 text-muted">EPIC 10 STAR </h6>
+                      <p class="card-text">Rp. 42.000</p>
                     </div>
                   </div>
                 </div>
                  <!-- card produk ke sembilan -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/mythic.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/legend.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">EPIC II - MYTHIC</h6>
-                      <p class="card-text">Rp. 180.000</p>
+                      <h6 class="card-subtitle mb-2 text-muted">LEGEND 10 STAR</h6>
+                      <p class="card-text">Rp. 52.000</p>
                     </div>
                   </div>
                 </div>
                  <!-- card produk ke sepuluh -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/mythic.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/mythic.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">LEGEND V - MYTHIC</h6>
-                      <p class="card-text">Rp. 135.000</p>
+                      <h6 class="card-subtitle mb-2 text-muted">MYTHIC 10 STAR</h6>
+                      <p class="card-text">Rp. 107.000</p>
                     </div>
                   </div>
                 </div>
                 <!-- card produk ke sebelas -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/honor.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/honor.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">MYTHIC FULL GRADING</h6>
-                      <p class="card-text">Rp. 130.000</p>
+                      <h6 class="card-subtitle mb-2 text-muted">HONOR 10 STAR</h6>
+                      <p class="card-text">Rp. 127.000</p>
                     </div>
                   </div>
                 </div>
                 <!-- card produk ke duabelas -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/honor.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/glory.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">MYTHIC 15 - HONOR 25</h6>
-                      <p class="card-text">Rp. 105.000</p>
+                      <h6 class="card-subtitle mb-2 text-muted">GLORY 10 STAR</h6>
+                      <p class="card-text">Rp. 167.000</p>
                     </div>
                   </div>
                 </div>
                 <!-- card produk ke tigabelas -->
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="assets/img/glory.png" class="card-img-top" alt="Produk 2" />
+                    <img src="assets/rank/immortal.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">HONOR 25 - GLORY 50</h6>
-                      <p class="card-text">Rp. 315.000</p>
+                      <h6 class="card-subtitle mb-2 text-muted">IMMORTAL 10 STAR</h6>
+                      <p class="card-text">Rp. 237.000</p>
                     </div>
                   </div>
                 </div>
@@ -257,19 +261,22 @@
               <p class="card-text">Pilih Metode Pembayaran</p>
               <div class="row">
                 <!-- card pembayaran Gopay -->
+                <input type="radio" class="btn-check" name="payment" id="payment" autocomplete="off">
+                  <label class="btn" for="payment">
                 <div class="col-md-12 d-flex justify-content-center ">
                   <div class="card-pay w-50 pt-2">
-                    <img src="assets/img/gopay.png" class="card-img-top" alt="Produk 1" />
+                    <img src="assets/pay/gopay.png" class="card-img-top" alt="Produk 1" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-white">Gopay a.n. Dominator Store</h6>
                       <p class="card-text text-white">089512532617</p>
                     </div>
                   </div>
                 </div>
+                  </label>
                 <!-- card pembayaran DANA -->
                 <div class="col-md-12 d-flex justify-content-center">
                   <div class="card-pay w-50 pt-2">
-                    <img src="assets/img/dana.png" class="card-img-top" alt="Produk 1" />
+                    <img src="assets/pay/dana.png" class="card-img-top" alt="Produk 1" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-white">Dana a.n. Iwan Kurniawan</h6>
                       <p class="card-text text-white">089512532617</p>
@@ -279,7 +286,7 @@
                 <!-- card pembayaran OVO -->
                 <div class="col-md-12 d-flex justify-content-center ">
                   <div class="card-pay w-50 pt-2">
-                    <img src="assets/img/ovo.png" class="card-img-top" alt="Produk 1" />
+                    <img src="assets/pay/ovo.png" class="card-img-top" alt="Produk 1" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-white">OVO a.n. Dominator Store</h6>
                       <p class="card-text text-white">089512532617</p>
@@ -289,7 +296,7 @@
                 <!-- card pembayaran Shopeepay -->
                 <div class="col-md-12 d-flex justify-content-center ">
                   <div class="card-pay w-50 pt-2">
-                    <img src="assets/img/shopeepay.png" class="card-img-top" alt="Produk 1" />
+                    <img src="assets/pay/shopeepay.png" class="card-img-top" alt="Produk 1" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-white">Shopeepay a.n. Dominator Store</h6>
                       <p class="card-text text-white">089512532617</p>
@@ -342,5 +349,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+  </body>
 </html>
