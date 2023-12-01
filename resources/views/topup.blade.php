@@ -58,8 +58,10 @@
               <h5 class="card-title">Pemilihan Paket</h5>
               <div class="row">
                 <!-- Card produk pertama -->
+
+                @foreach ($product as $item)
                 <div class="col-md-3">
-                  <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+                  <input type="radio" class="btn-check" name="packet" id="option1" autocomplete="off">
                   <label class="btn" for="option1">
                   <div class="card">
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 1" />
@@ -70,27 +72,8 @@
                   </div>
                   </label>
                 </div>
-                <!-- Card produk ke dua -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">5 Diamonds</h6>
-                      <p class="card-text">Rp. 1.500</p>
-                    </div>
-                  </div>
-                  </label>
-                </div>
-                <!-- Card produk ke tiga -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">10 Diamonds</h6>
-                      <p class="card-text">Rp. 2.800</p>
-                    </div>
-                  </div>
-                </div>
+                @endforeach
+               
               </div>
             </div>
           </div>

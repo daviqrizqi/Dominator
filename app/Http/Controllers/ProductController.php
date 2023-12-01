@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\NavigationController;
 
 class ProductController extends Controller
 {
@@ -10,7 +11,7 @@ class ProductController extends Controller
 
         $result = Paket::all();
 
-        return redirect();
+        return $result;
         
     }
 
