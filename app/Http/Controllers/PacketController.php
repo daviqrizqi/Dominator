@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminControlle extends Controller
+class PacketController extends Controller
 {
-    //
+   
 }

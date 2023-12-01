@@ -15,8 +15,8 @@ class CreateRiwayatsTable extends Migration
     {
         Schema::create('riwayats', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('transaksi-id');
-            $table->unsignedBigInteger('status-id');
+            $table->unsignedBigInteger('transaksiId')->nullable(false);
+            $table->unsignedBigInteger('statusiId')->nullable(false);
             $table->timestamps();
         });
     }

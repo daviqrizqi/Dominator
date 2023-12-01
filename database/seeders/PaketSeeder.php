@@ -13,6 +13,50 @@ class PaketSeeder extends Seeder
      */
     public function run()
     {
-        //
+            $paket  = [
+                [
+                    'nama' => '3 Diamonds',
+                    'harga' =>  '1.250',
+                    'tipe' => 'topUp'
+                ],
+                [
+                    'nama' => '3 Diamonds',
+                    'harga' =>  '1.250',
+                    'tipe' => 'topUp'
+                ],
+                [
+                    'nama' => '3 Diamonds',
+                    'harga' =>  '1.250',
+                    'tipe' => 'topUp'
+                ],
+                [
+                    'nama' => '3 Diamonds',
+                    'harga' =>  '1.250',
+                    'tipe' => 'topUp'
+                ],
+                [
+                    'nama' => '3 Diamonds',
+                    'harga' =>  '1.250',
+                    'tipe' => 'topUp'
+                ],
+                [
+                    'nama' => '3 Diamonds',
+                    'harga' =>  '1.250',
+                    'tipe' => 'topUp'
+                ],
+                [
+                    'nama' => '3 Diamonds',
+                    'harga' =>  '1.250',
+                    'tipe' => 'topUp'
+                ],
+                [
+                    'nama' => '3 Diamonds',
+                    'harga' =>  '1.250',
+                    'tipe' => 'topUp'
+                ],
+                
+
+                
+            ];
     }
 }

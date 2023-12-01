@@ -15,6 +15,7 @@ class CreateJokisTable extends Migration
     {
         Schema::create('jokis', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('packetId')->nullable(false);
             $table->string('login-akun-via');
             $table->string('email-notelp-akun');
             $table->string('password');

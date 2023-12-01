@@ -50,7 +50,7 @@
             </div>
           </div>
         </div>
-
+<form action="{{ route('topup-transaksi') }}" method="post">
         <div class="col-md-8">
           <!-- Kolom kedua -->
           <div class="card">
@@ -61,13 +61,13 @@
                 <div class="col-md-3">
                   <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
                   <label class="btn" for="option1">
-                    <div class="card">
-                      <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 1" />
-                        <div class="card-body">
-                          <h6 class="card-subtitle mb-2 text-muted">3 Diamonds</h6>
-                          <p class="card-text">Rp. 1.250</p>
-                        </div>
+                  <div class="card">
+                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 1" />
+                    <div class="card-body">
+                      <h6 class="card-subtitle mb-2 text-muted">3 Diamonds</h6>
+                      <p class="card-text">Rp. 1.250</p>
                     </div>
+                  </div>
                   </label>
                 </div>
                 <!-- Card produk ke dua -->
@@ -76,9 +76,10 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">5 Diamonds</h6>
-                      <p class="card-text">Rp. 1.800</p>
+                      <p class="card-text">Rp. 1.500</p>
                     </div>
                   </div>
+                  </label>
                 </div>
                 <!-- Card produk ke tiga -->
                 <div class="col-md-3">
@@ -86,197 +87,7 @@
                     <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
                     <div class="card-body">
                       <h6 class="card-subtitle mb-2 text-muted">10 Diamonds</h6>
-                      <p class="card-text">Rp. 3.200</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke empat -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">14 Diamonds</h6>
-                      <p class="card-text">Rp. 4.000</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke lima -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">28 Diamonds</h6>
-                      <p class="card-text">Rp. 7.800</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke enam -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">36 Diamonds</h6>
-                      <p class="card-text">Rp. 9.600</p>
-                    </div>
-                  </div>
-                </div>
-                 <!-- card produk ke tujuh -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">44 Diamonds</h6>
-                      <p class="card-text">Rp. 11.500</p>
-                    </div>
-                  </div>
-                </div>
-                 <!-- card produk ke delapan -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">59 Diamonds</h6>
-                      <p class="card-text">Rp. 15.500</p>
-                    </div>
-                  </div>
-                </div>
-                 <!-- card produk ke sembilan -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">170 Diamonds</h6>
-                      <p class="card-text">Rp. 43.500</p>
-                    </div>
-                  </div>
-                </div>
-                 <!-- card produk ke sepuluh -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">184 Diamonds</h6>
-                      <p class="card-text">Rp. 48.300</p>
-                    </div>
-                  </div>
-                </div>
-                 <!-- card produk ke sebelas -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">240 Diamonds</h6>
-                      <p class="card-text">Rp. 62.800</p>
-                    </div>
-                  </div>
-                </div>
-                 <!-- card produk ke duabelas -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">296 Diamonds</h6>
-                      <p class="card-text">Rp. 77.300</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke tigabelas -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">370 Diamonds</h6>
-                      <p class="card-text">Rp. 96.600</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke empatbelas -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">408 Diamonds</h6>
-                      <p class="card-text">Rp. 106.300</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke limabelas -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">875 Diamonds</h6>
-                      <p class="card-text">Rp. 220.000</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke enambelas -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">1136 Diamonds</h6>
-                      <p class="card-text">Rp. 283.500</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke tujuhbelas -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">1704 Diamonds</h6>
-                      <p class="card-text">Rp. 425.000</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke delapanbelas -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">2010 Diamonds</h6>
-                      <p class="card-text">Rp. 472.000</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke sembilanbelas -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">2625 Diamonds</h6>
-                      <p class="card-text">Rp. 625.000</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke duapuluh -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">4588 Diamonds</h6>
-                      <p class="card-text">Rp. 1.100.200</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke duapuluhsatu -->
-                <div class="col-md-3 ">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">6030 Diamonds</h6>
-                      <p class="card-text">Rp. 1.410.000</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card produk ke duapuluhdua -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="assets/img/diamondsedikit.png" class="card-img-top" alt="Produk 2" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">9660 Diamonds</h6>
-                      <p class="card-text">Rp. 2.275.000</p>
+                      <p class="card-text">Rp. 2.800</p>
                     </div>
                   </div>
                 </div>
@@ -412,5 +223,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
-</html> 
+  </body>
+</html>

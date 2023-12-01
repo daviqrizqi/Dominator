@@ -15,10 +15,9 @@ class CreateTransaksisTable extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user-id');
-            $table->unsignedBigInteger('paket-id');
-            $table->unsignedBigInteger('metode-pembayaran-id');
-            $table->unsignedBigInteger('paket-pembelian-id');
+            $table->unsignedBigInteger('topUpid')->nullable();
+            $table->unsignedBigInteger('jokiId')->nullable();
+            $table->unsignedBigInteger('pembayaranId')->nullable(false);
             $table->string('tipe-transaksi');
             $table->string('bukti-pembayaran');
             $table->integer('total-pembayaran');

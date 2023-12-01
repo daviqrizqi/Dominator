@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TopUpController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\NavigationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +29,18 @@ Route::get('/', function () {
 //     return view('login');
 // });
 
-Route::get('/topup', [TopUpController::class, 'index'])->name('topup');
-Route::get('/joki', [TopUpController::class, 'show'])->name('joki');
+
+
+//route untuk navigasi
+Route::get('/topup', [NavigationController::class, 'topUpView'])->name('topup');
+Route::get('/joki', [NavigationController::class, 'show'])->name('joki');
+
+//route untuk transaksi
+Route::post('/transasksi/topup', [CustomerController::class, 'topUpTranscation'])->name('topup-transaksi');
+Route::post('/transaksi/joki', [CustomerController::class, 'jokiTranscation'])->name('joki-transaksi');
+
+//route unutk admin
+Route::get('/admin/report/topup', [AdminController::class,'reportTopUp'])->name('report-topup');
+Route::get('/admin/report/joki',[AdminController::class,'reportJoki'])->name('report-joki');
+
+

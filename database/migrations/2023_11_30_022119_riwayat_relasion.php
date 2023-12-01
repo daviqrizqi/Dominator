@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class RiwayatRelasion extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('password');
-            $table->unsignedBigInteger('roleId')->nullable(false);
-            $table->timestamps();
+        Schema::table('riwayats', function ($table) {
+            $table->foreign('transaksiId')->references('id')->on('transaksis');
+            $table->foreign('statusiId')->references('id')->on('statuses');
+            
         });
     }
+    //statusiId
 
     /**
      * Reverse the migrations.
@@ -29,6 +28,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        //
     }
 }

@@ -15,6 +15,7 @@ class CreateTopUpsTable extends Migration
     {
         Schema::create('top_ups', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('packetId')->nullable(false);
             $table->string('id-user-akun');
             $table->string('id-server-akun');
             $table->string('nickname');
