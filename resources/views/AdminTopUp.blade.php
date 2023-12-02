@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/AdminTopUp.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/AdminTopUp.css') }}" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -16,29 +17,31 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Dominator Store</title>
   </head>
   <body>
+    @if(session('success'))
+    <script>
+        alert('{{ session('error') }}'); // Menampilkan pesan dalam bentuk pop-up
+    </script>
+    @endif
     <div class="nav-container">
       <div class="nav-logo">
-        <img
-          src="assets/img/logo fix.jpeg"
-          alt="Logo Dominator Store"
-          width="50"
-          height="50"
-        />
+        <img class="rounded-circle" src="{{ asset('assets/img/logo fix.jpeg') }}" alt="Logo Dominator Store" width="50" height="50">
         <span class="horizontal-text">Dominator Store</span>
       </div>
       <div class="nav-link">
-        <a href="#topup" class="link-list">Top Up</a>
-        <a href="#joki" class="link-list">Joki</a>
+        <a href="{{ route('topUpReport') }}" class="link-list">Top Up</a>
+        <a href="{{ route('jokiReport') }}" class="link-list">Joki</a>
       </div>
       <div class="nav-logout">
-        <a href="" class="btn-logout">Logout</a>
+        <a href="{{ route('login') }}" class="btn-logout">Logout</a>
       </div>
     </div>
     <main>
-      <div class="col-md-8">
+      <div class="col-md-8 pt-4">
         <h3>Orderan Top Up</h3>
         <div class="card">
           <div class="card-body">
@@ -55,125 +58,27 @@
                   <th>Bukti Transaksi</th>
                   <th>Status</th>
                 </tr>
-                <tr>
-                  <td>80 Diamonds</td>
-                  <td>112233445</td>
-                  <td>11223</td>
-                  <td>Coba1</td>
-                  <td>08123456789</td>
-                  <td>Gopay</td>
-                  <td>
-                    <img
-                      src="assets/img/picture.png"
-                      alt="picture Icon"
-                      width="50"
-                      height="50"
-                    />
-                  </td>
-                  <td><button class="konfirbtn">Konfirmasi</button></td>
-                </tr>
-                <tr>
-                  <td>30 Diamonds</td>
-                  <td>112233445</td>
-                  <td>11223</td>
-                  <td>Coba1</td>
-                  <td>08123456789</td>
-                  <td>Dana</td>
-                  <td>
-                    <img
-                      src="assets/img/picture.png"
-                      alt="picture Icon"
-                      width="50"
-                      height="50"
-                    />
-                  </td>
-                  <td><button class="konfirbtn">Konfirmasi</button></td>
-                </tr>
-                <tr>
-                  <td>160 Diamonds</td>
-                  <td>112233445</td>
-                  <td>11223</td>
-                  <td>Coba1</td>
-                  <td>08123456789</td>
-                  <td>Gopay</td>
-                  <td>
-                    <img
-                      src="assets/img/picture.png"
-                      alt="picture Icon"
-                      width="50"
-                      height="50"
-                    />
-                  </td>
-                  <td><button class="konfirbtn">Konfirmasi</button></td>
-                </tr>
-                <tr>
-                  <td>15 Diamonds</td>
-                  <td>112233445</td>
-                  <td>11223</td>
-                  <td>Coba1</td>
-                  <td>08123456789</td>
-                  <td>Gopay</td>
-                  <td>
-                    <img
-                      src="assets/img/picture.png"
-                      alt="picture Icon"
-                      width="50"
-                      height="50"
-                    />
-                  </td>
-                  <td><button class="konfirbtn">Konfirmasi</button></td>
-                </tr>
-                <tr>
-                  <td>80 Diamonds</td>
-                  <td>112233445</td>
-                  <td>11223</td>
-                  <td>Coba1</td>
-                  <td>08123456789</td>
-                  <td>Ovo</td>
-                  <td>
-                    <img
-                      src="assets/img/picture.png"
-                      alt="picture Icon"
-                      width="50"
-                      height="50"
-                    />
-                  </td>
-                  <td><button class="konfirbtn">Konfirmasi</button></td>
-                </tr>
-                <tr>
-                  <td>600 Diamonds</td>
-                  <td>112233445</td>
-                  <td>11223</td>
-                  <td>Coba1</td>
-                  <td>08123456789</td>
-                  <td>Shopeepay</td>
-                  <td>
-                    <img
-                      src="assets/img/picture.png"
-                      alt="picture Icon"
-                      width="50"
-                      height="50"
-                    />
-                  </td>
-                  <td><button class="konfirbtn">Konfirmasi</button></td>
-                </tr>
-                <tr>
-                  <td>100 Diamonds</td>
-                  <td>112233445</td>
-                  <td>11223</td>
-                  <td>Coba1</td>
-                  <td>08123456789</td>
-                  <td>Dana</td>
-                  <td>
-                    <img
-                      src="assets/img/picture.png"
-                      alt="picture Icon"
-                      width="50"
-                      height="50"
-                    />
-                  </td>
-                  <td><button class="konfirbtn">Konfirmasi</button></td>
-                </tr>
+              @foreach ($data as $item)
+                  <tr>
+                    <td>{{ $item->namapacket }}</td>
+                    <td>{{ $item->akunUser }}</td>
+                    <td>{{ $item->serverAkun }}</td>
+                    <td>{{ $item->nickname }}</td>
+                    <td>{{ $item->whatsapp }}</td>
+                    <td>{{ $item->nama }}</td>
+                    <td>
+                      <img
+                        src="{{ $item->buktiPembayaran }}"
+                        alt="picture Icon"
+                        width="50"
+                        height="50"
+                      />
+                    </td>
+                    <td><button class="btn btn-success disabled">Konfirmasi</button></td>
+                  </tr>
+              @endforeach
+            
+  
               </table>
             </div>
           </div>
@@ -185,7 +90,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="footer-logo">
-              <img src="assets/img/logods.png" alt="Logo Toko" />
+              <img class="rounded-circle" src="{{ asset('assets/img/logo fix.jpeg') }}" alt="Logo Dominator Store" width="50" height="50">
             </div>
           </div>
           <div class="col-md-6 text-md-right">

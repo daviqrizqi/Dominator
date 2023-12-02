@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class RoleSeeder extends Seeder
+class userSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +14,12 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
+    
 
-
-        Role::create([
-            "role" => 'admin'
+        User::create([
+            "name" => "admin",
+            "password" => "password",
+            "roleId" => 1,
         ]);
-        
     }
 }

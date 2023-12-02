@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,6 +17,21 @@
     <title>Dominator Store</title>
   </head>
   <body>
+    @if($errors->any())
+    <script>
+        var errorMessage = '';
+        @foreach ($errors->all() as $error)
+            errorMessage += "{{ $error }}\n";
+        @endforeach
+
+        alert(errorMessage);
+    </script>
+    @endif
+    @if(session('error'))
+    <script>
+        alert('{{ session('error') }}'); // Menampilkan pesan dalam bentuk pop-up
+    </script>
+    @endif
     <div class="nav-container">
       <div class="nav-logo">
         <img src="assets/img/logods.png" alt="Logo Dominator Store">
@@ -55,61 +71,62 @@
 
         <div class="col-md-8">
           <!-- Kolom kedua -->
+          <form action="{{ route('joki-transaksi') }}" method="post" enctype="multipart/form-data">
+            @csrf
           <div class="card">
             <div class="card-body-all">
               <h5 class="card-title">Lengkapi Data</h5>
               <p class="card-text">Masukkan User ID</p>
-              <form action="">
               <div class="form-group row justify-content-center align-item-center">
                 <label for="loginvia" class="col-sm-4 text-left">Login Via</label>
                 <div class="col-sm-4">
-                <select name="loginvia" id="loginvia" class="form-control rounded-pill">
-                  <option value="log">Login akun via</option>
+                <select name="loginAkunVia" id="loginvia" class="form-control rounded-pill" required>
+                  <option hidden >Login akun via</option>
                   <option value="moonton">Moonton(Rekomendasi)</option>
                   <option value="vk">VK</option>
                   <option value="tiktok">Tiktok</option>
                   <option value="facebook">Facebook</option>
+                  <option value="google-play">Google Play</option>
                   </select>
                 </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="email" class="col-sm-4 text-left">Email/No.Telp</label>
                 <div class="col-sm-4">
-                  <input type="text" name="email" id="email" placeholder="Email" class="form-control rounded-pill" />
+                  <input type="text" name="emailNotelpAkun" id="email" placeholder="Email" class="form-control rounded-pill" required />
                 </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="password" class="col-sm-4 text-left">Password</label>
                 <div class="col-sm-4">
-                <input type="text" name="password" id="password" placeholder="Password" class="form-control rounded-pill" />
+                <input type="text" name="password" id="password" placeholder="Password" class="form-control rounded-pill" required />
               </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="reqhero" class="col-sm-4 text-left">Request Hero</label>
                 <div class="col-sm-4">
-                <input type="text" name="reqhero" id="reqhero" placeholder="Request Hero" class="form-control rounded-pill" />
+                <input type="text" name="reqHero" id="reqhero" placeholder="Request Hero" class="form-control rounded-pill" required />
               </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="nickname" class="col-sm-4 text-left">Nickname</label>
                 <div class="col-sm-4">
-                <input type="text" name="nickname" id="nickname" placeholder="Nickname" class="form-control rounded-pill" />
+                <input type="text" name="nickname" id="nickname" placeholder="Nickname" class="form-control rounded-pill" required />
               </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="keterangan" class="col-sm-4 text-left">Keterangan</label>
                 <div class="col-sm-4">
-                <input type="text" name="keterangan" id="keterangan" placeholder="Keterangan" class="form-control rounded-pill" />
+                <input type="text" name="keterangan" id="keterangan" placeholder="Keterangan" class="form-control rounded-pill" required />
               </div>
               </div>
               <div class="form-group row justify-content-center align-item-center">
                 <label for="whatsapp" class="col-sm-4 text-left">Nomor Whatsapp</label>
                 <div class="col-sm-4">
-                <input type="text" name="whatsapp" id="whatsapp" placeholder="whatsapp" class="form-control rounded-pill" />
+                <input type="text" name="whatsapp" id="whatsapp" placeholder="whatsapp" class="form-control rounded-pill" required />
               </div>
               </div>
             </div>
-          </form>
           </div>
 
           <!-- Pilihan Paket -->
@@ -117,19 +134,36 @@
             <div class="card-body-all">
               <h5 class="card-title">Pemilihan Paket</h5>
               <div class="row">
+
                 <!-- Card produk pertama -->
-                <div class="col-md-4">
-                  <input type="radio" class="btn-check" name="rank" id="rank1" autocomplete="off">
-                  <label class="btn" for="rank1">
-                  <div class="card">
-                    <img src="assets/rank/gm.png" class="card-img-top" alt="Produk 1" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">GRAND MASTER</h6>
-                      <p class="card-text">Rp. 4.000</p>
-                    </div>
-                  </div>
-                  </label>
+                @php
+                $i = 1;
+            @endphp
+            @foreach ($packet as $item)
+                @php
+                    $id = $item->id;
+                @endphp
+                <!-- Card produk pertama -->
+                <div class="col-md-3">
+                    <input type="radio" class="btn-check" name="packetId"
+                        value="{{ $item->id }}" id="option{{ $i }}"
+                        autocomplete="off">
+                    <label class="btn" for="option{{ $i }}">
+                        <div class="card">
+                            <img src="{{ $item->gambar }}" class="card-img-top"
+                                alt="Produk {{ $i }}" />
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">{{ $item->nama }}
+                                </h6>
+                                <p class="card-text">Rp.{{ $item->harga }}</p>
+                            </div>
+                        </div>
+                    </label>
                 </div>
+                @php
+                    $i++;
+                @endphp
+            @endforeach
               </div>
             </div>
           </div>        
@@ -141,48 +175,29 @@
               <p class="card-text">Pilih Metode Pembayaran</p>
               <div class="row">
                 <!-- card pembayaran Gopay -->
-                <input type="radio" class="btn-check" name="payment" id="payment" autocomplete="off">
-                  <label class="btn" for="payment">
-                <div class="col-md-12 d-flex justify-content-center ">
-                  <div class="card-pay w-50 pt-2">
-                    <img src="assets/pay/gopay.png" class="card-img-top" alt="Produk 1" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-white">Gopay a.n. Dominator Store</h6>
-                      <p class="card-text text-white">089512532617</p>
+                @php
+                $k = 1;
+            @endphp
+            @foreach ($metode as $item)
+                <input type="radio" class="btn-check" name="pembayaranId"
+                    id="payment{{ $k }}" autocomplete="off" value="{{ $item->id }}">
+                <label class="btn" for="payment{{ $k }}">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="card-pay w-50 pt-2">
+                            <img src="assets/pay/{{ $item->foto }}" class="card-img-top"
+                                alt="{{ $item->nama }}" />
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-white">{{ $item->nama }}
+                                </h6>
+                                <p class="card-text text-white">{{ $item->rekening }}</p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                  </label>
-                <!-- card pembayaran DANA -->
-                <div class="col-md-12 d-flex justify-content-center">
-                  <div class="card-pay w-50 pt-2">
-                    <img src="assets/pay/dana.png" class="card-img-top" alt="Produk 1" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-white">Dana a.n. Iwan Kurniawan</h6>
-                      <p class="card-text text-white">089512532617</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card pembayaran OVO -->
-                <div class="col-md-12 d-flex justify-content-center ">
-                  <div class="card-pay w-50 pt-2">
-                    <img src="assets/pay/ovo.png" class="card-img-top" alt="Produk 1" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-white">OVO a.n. Dominator Store</h6>
-                      <p class="card-text text-white">089512532617</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- card pembayaran Shopeepay -->
-                <div class="col-md-12 d-flex justify-content-center ">
-                  <div class="card-pay w-50 pt-2">
-                    <img src="assets/pay/shopeepay.png" class="card-img-top" alt="Produk 1" />
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-white">Shopeepay a.n. Dominator Store</h6>
-                      <p class="card-text text-white">089512532617</p>
-                    </div>
-                  </div>
-                </div>
+                </label>
+                @php
+                    $k++;
+                @endphp
+            @endforeach
               </div>
             </div>
           </div>
@@ -191,12 +206,13 @@
             <div class="card-body-all">
               <h5 class="card-title">Konfirmasi Pembayaran</h5>
               <p class="card-text">Lampiran Bukti Transaksi</p>
-              <input type="file" name="" id="" placeholder="Lampirkan Foto"/>
-              <div class="nav-order">
-                <a href="" class="btn-order">Order</a>
-              </div>
+              <input type="file" name="buktiPembayaran" id="" placeholder="Lampirkan Foto"/>
+              <div class="nav-order pt-2">
+                <button type="submit" class="btn btn-primary">Order</button>
+            </div>
             </div>
           </div>
+        </form>
         </div>
       </div>
     </div>

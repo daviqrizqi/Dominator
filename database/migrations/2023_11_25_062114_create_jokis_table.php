@@ -21,7 +21,7 @@ class CreateJokisTable extends Migration
             $table->string('password');
             $table->string('nickname');
             $table->string('req-hero');
-            $table->string('keterangan');
+            $table->string('keterangan')->nullable();
             $table->string('whatsapp');
             $table->timestamps();
         });

@@ -27,12 +27,12 @@ class PembayaranSeeder extends Seeder
                 'foto' => 'dana.png'
             ],
             [
-                'nama' => 'OVO a.n. Iwan Kurniawan',
+                'nama' => 'OVO a.n. Dominator Store',
                 'rekening' => '089512532617',
                 'foto' => 'ovo.png'
             ],
             [
-                'nama' => 'Shopeepay a.n. Iwan Kurniawan',
+                'nama' => 'Shopeepay a.n. Dominator Store',
                 'rekening' => '089512532617',
                 'foto' => 'shopeepay.png'
             ],

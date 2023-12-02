@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +18,7 @@
 </head>
 
 <body>
-    <div class="nav-container">
+        <div class="nav-container">
         <div class="nav-logo">
             <img src="assets/img/logods.png" alt="Logo Dominator Store">
             <div class="nav-title">Dominator Store</div>
@@ -27,6 +29,7 @@
         </div>
     </div>
     <main>
+
         <div class="container-fluid text-center pt-4">
             <div class="row justify-content-between">
                 <div class="col-md-4">
@@ -55,7 +58,8 @@
 
                 <div class="col-md-8">
                     <!-- Kolom kedua -->
-                    <form action="{{ route('topup-transaksi') }}" method="post">
+                    <form action="{{ route('topup-transaksi') }}" method="post" enctype="multipart/form-data">
+                        @csrf
                         <div class="card">
                             <div class="card-body-all">
                                 <h5 class="card-title">Pemilihan Paket</h5>
@@ -70,7 +74,7 @@
                                         @endphp
                                         <!-- Card produk pertama -->
                                         <div class="col-md-3">
-                                            <input type="radio" class="btn-check" name="packet"
+                                            <input type="radio" class="btn-check" name="packetId"
                                                 value="{{ $item->id }}" id="option{{ $i }}"
                                                 autocomplete="off">
                                             <label class="btn" for="option{{ $i }}">
@@ -98,39 +102,39 @@
                             <div class="card-body-all">
                                 <h5 class="card-title">Lengkapi Data</h5>
                                 <p class="card-text">Masukkan Data Anda</p>
-                                <form action="">
+
                                     <div class="form-group row justify-content-center align-item-center">
                                         <label for="userid" class="col-sm-4 text-left">User ID</label>
                                         <div class="col-sm-4">
-                                            <input type="text" name="userid" id="userid" placeholder="User ID"
-                                                class="form-control rounded-pill" />
+                                            <input type="text" name="idUserAkun" id="userid" placeholder="User ID"
+                                                class="form-control rounded-pill" required />
                                         </div>
                                     </div>
                                     <div class="form-group row justify-content-center align-item-center">
                                         <label for="serverid" class="col-sm-4 text-left">Server ID</label>
                                         <div class="col-sm-4">
-                                            <input type="text" name="serverid" id="serverid" placeholder="Server ID"
-                                                class="form-control rounded-pill" />
+                                            <input type="text" name="idServerAkun" id="serverid" placeholder="Server ID"
+                                                class="form-control rounded-pill" required />
                                         </div>
                                     </div>
                                     <div class="form-group row justify-content-center align-item-center">
                                         <label for="nickname" class="col-sm-4 text-left">Nickname</label>
                                         <div class="col-sm-4">
                                             <input type="text" name="nickname" id="nickname" placeholder="Nickname"
-                                                class="form-control rounded-pill" />
+                                                class="form-control rounded-pill" required />
                                         </div>
                                     </div>
                                     <div class="form-group row justify-content-center align-item-center">
                                         <label for="whatsapp" class="col-sm-4 text-left">Nomor Whatsapp</label>
                                         <div class="col-sm-4">
                                             <input type="text" name="whatsapp" id="whatsapp"
-                                                placeholder="Nomor Whatsapp" class="form-control rounded-pill" />
+                                                placeholder="Nomor Whatsapp" class="form-control rounded-pill" required/>
                                         </div>
                                     </div>
                                     <p class="font-italic text-danger">Mohon Cek kembali id dan server game anda untuk
                                         menghindari kesalahan!!</p>
                             </div>
-                    </form>
+
                 </div>
                 <!-- Metode Pembayaran -->
                 <div class="card">
@@ -143,7 +147,7 @@
                                 $k = 1;
                             @endphp
                             @foreach ($metode as $item)
-                                <input type="radio" class="btn-check" name="payment"
+                                <input type="radio" class="btn-check" name="pembayaranId"
                                     id="payment{{ $k }}" autocomplete="off" value="{{ $item->id }}">
                                 <label class="btn" for="payment{{ $k }}">
                                     <div class="col-md-12 d-flex justify-content-center">
@@ -171,12 +175,13 @@
                     <div class="card-body-all pd-5">
                         <h5 class="card-title">Konfirmasi Pembayaran</h5>
                         <p class="card-text">Lampiran Bukti Transaksi</p>
-                        <input type="file" name="" id="" placeholder="Lampirkan Foto" />
+                        <input type="file" name="buktiPembayaran" id="" placeholder="Lampirkan Foto" required />
                         <div class="nav-order pt-2">
-                            <a href="" class="btn-order">Order</a>
+                            <button type="submit" class="btn btn-primary">Order</button>
                         </div>
                     </div>
                 </div>
+              </form>
             </div>
         </div>
     </main>

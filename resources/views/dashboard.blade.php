@@ -18,6 +18,11 @@
     />
   </head>
   <body>
+    @if(session('success'))
+    <script>
+        alert('{{ session('success') }}'); // Menampilkan pesan dalam bentuk pop-up
+    </script>
+    @endif
     <div class="nav-container">
       <div class="nav-logo">
         <img src="assets/img/logods.png" alt="Logo Dominator Store">

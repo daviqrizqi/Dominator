@@ -18,9 +18,8 @@ class CreateTransaksisTable extends Migration
             $table->unsignedBigInteger('topUpid')->nullable();
             $table->unsignedBigInteger('jokiId')->nullable();
             $table->unsignedBigInteger('pembayaranId')->nullable(false);
-            $table->string('tipe-transaksi');
             $table->string('bukti-pembayaran');
-            $table->integer('total-pembayaran');
+            $table->bigInteger('total-pembayaran');
             $table->timestamps();
         });
     }

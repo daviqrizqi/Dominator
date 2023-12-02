@@ -33,14 +33,18 @@ Route::get('/', function () {
 
 //route untuk navigasi
 Route::get('/topup', [NavigationController::class, 'topUpView'])->name('topup');
-Route::get('/joki', [NavigationController::class, 'show'])->name('joki');
+Route::get('/admin', [NavigationController::class, 'adminLoginView'])->name('login');
+Route::get('/joki', [NavigationController::class, 'jokiView'])->name('joki');
 
 //route untuk transaksi
-Route::post('/transasksi/topup', [CustomerController::class, 'topUpTranscation'])->name('topup-transaksi');
-Route::post('/transaksi/joki', [CustomerController::class, 'jokiTranscation'])->name('joki-transaksi');
+Route::post('/transasksi/topup', [NavigationController::class, 'transaksiTopUpview'])->name('topup-transaksi');
+Route::post('/transaksi/joki', [NavigationController::class, 'transaksiJokiView'])->name('joki-transaksi');
 
 //route unutk admin
-Route::get('/admin/report/topup', [AdminController::class,'reportTopUp'])->name('report-topup');
-Route::get('/admin/report/joki',[AdminController::class,'reportJoki'])->name('report-joki');
+Route::get('/admin', [NavigationController::class, 'adminLoginView'])->name('login');
+Route::post('/admin/auth', [NavigationController::class, 'loginProsesView'])->name('login-auth');
+Route::get('/admin/topup', [NavigationController::class, 'adminTopUpView'])->name('topUpReport');
+Route::get('/admin/joki', [NavigationController::class, 'adminJokiView'])->name('jokiReport');
+
 
 

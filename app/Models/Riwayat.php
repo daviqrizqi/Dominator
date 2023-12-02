@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Riwayat extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'transaksiId',
+        'statusiId'
+    ];
 }

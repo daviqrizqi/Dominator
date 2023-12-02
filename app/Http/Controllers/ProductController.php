@@ -8,15 +8,22 @@ use App\Http\Controllers\NavigationController;
 
 class ProductController extends Controller
 {
-    public function index() {
+    public function topUpPacket() {
 
         $result = Paket::where('tipe','topup')->get();
 
         return $result;
         
     }
+    public function jokiPacket() {
 
-    public  function create(Request $request) {
+      $result = Paket::where('tipe','joki')->get();
+
+      return $result;
+      
+  }
+
+    public  function create($request) {
         $validate = $request->validate([
               'nama' => 'required',
               'harga' =>  'required | number',

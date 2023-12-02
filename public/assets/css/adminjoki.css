@@ -7,8 +7,8 @@
 }
 
 .nav-container {
-  background-color: #c5d7e3;
-  color: #2d4b94;
+  background-color: #C5D7E3;
+  color: #2D4B94;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,9 +21,22 @@
   border-radius: 50%;
 }
 
+.nav-title {
+  line-height: 2.5;
+  margin-left: 10px;
+  font-size: 1.3rem;
+  display: inline;
+  align-items: center;
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
+}
+
 .nav-link .link-list {
   text-decoration: unset;
-  color: #2d4b94;
+  color: #2D4B94;
   margin: 0px 16px;
 }
 
@@ -31,28 +44,13 @@
   font-weight: 500;
 }
 
-.nav-logout .btn-logout {
-  background-color: #2d4b94;
-  color: #c5d7e3;
+.nav-login .btn-login {
+  background-color: #2D4B94;
+  color: #C5D7E3;
   text-decoration: unset;
   padding: 4px 26px;
   border-radius: 16px;
   font-size: 1rem;
-}
-.nav-logout .btn-logout:hover {
-  background-color: rgb(27, 102, 222);
-}
-
-.konfirbtn {
-  background-color: #2d4b94;
-  color: #c5d7e3;
-  /* text-decoration: unset; */
-  padding: 4px 26px;
-  border-radius: 20px;
-  font-size: 1rem;
-}
-.konfirbtn:hover {
-  background-color: rgb(27, 102, 222);
 }
 
 /* Menerapkan jarak antara content dengan card */
@@ -60,9 +58,9 @@
   margin-top: 20px;
 } */
 
-/* .col { */
-/* color: #c5d7e3; */
-/* } */
+.col {
+  color: #c5d7e3;
+}
 
 main {
   /* width: 100%; */
@@ -76,32 +74,38 @@ main {
 }
 
 table {
-  margin: auto;
-  float: center;
+  margin: 10px;
+  float: center; 
 }
 
 /* Mengatur lebar gambar produk dalam card agar lebih responsif */
-/* .card-img-top { */
-/* max-width: 33%; */
-/* height: auto; */
-/* display: block; */
-/* margin: 0 auto; */
-/* } */
+.card-img-top {
+  max-width: 33%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
 /* Menerapkan jarak antara card produk */
 .card {
-  margin: 20px;
+  margin: 10px;
+  width: 1300px;
 }
 
-/* .nav-order .btn-order { */
-/* background-color: #2d4b94; */
-/* color: #c5d7e3; */
-/* text-decoration: unset; */
-/* padding: 4px 26px; */
-/* border-radius: 16px; */
-/* font-size: 1rem; */
-/* font-weight: bold; */
-/* } */
+.card-body{
+  width: auto;
+  margin: 10px;
+}
+
+.nav-order .btn-order {
+  background-color: #2d4b94;
+  color: #c5d7e3;
+  text-decoration: unset;
+  padding: 4px 26px;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+}
 
 footer {
   color: #fcec02;
@@ -120,11 +124,11 @@ footer {
   }
 
   .container {
-    margin-top: 10px;
+    margin-top: 10px 0;
   }
 
   .card {
-    margin: 10px 0;
+    margin: 200px 0;
   }
 }
 
@@ -137,5 +141,5 @@ footer {
 
 h3 {
   color: white;
-  padding: 10px;
+  padding: 10px;
 }
