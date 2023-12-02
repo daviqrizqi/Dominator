@@ -9,7 +9,7 @@ class StorageController extends Controller
 {
     public function saveImgFile ($location, $gambar, $type){
 
-        $namaGambar = time() . '_' . uniqid() . '-'.$type . $gambar->getClientOriginalExtension();
+        $namaGambar = time() . '_' . uniqid() . '-' . $type . '.' . $gambar->getClientOriginalExtension();
 
             // Simpan gambar ke folder "public/images"
             $gambar->storeAs('public/'.$location, $namaGambar);
